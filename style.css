@@ -1,0 +1,264 @@
+/* global styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Manrope&display=swap');
+
+:root {
+    --heading-font: 'Fraunces', sans-serif;
+    --heading-weight: 600;
+
+    --desktop-headingL-size: 80px;
+    --desktop-headingL-line-spacing: 80px;
+    --tablet-headingL-size: 60px;
+    --tablet-headingL-line-spacing: 60px;
+    --mobile-headingL-size: 50px;
+    --mobile-headingL-line-spacing: 50px;
+    
+    --desktop-headingM-size: 56px;
+    --desktop-headingM-line-spacing: 64px;
+    --tablet-headingM-size: 48px;
+    --tablet-headingM-line-spacing: 56px;
+    --mobile-headingM-size: 32px;
+    --mobile-headingM-line-spacing: 48px;
+
+    --desktop-headingS-size: 32px;
+    --desktop-headingS-line-spacing: 40px;
+    --tablet-headingS-size: 28px;
+    --tablet-headingS-line-spacing: 36px;
+    --mobile-headingS-size: 28px;
+    --mobile-headingS-line-spacing: 36px;
+
+    --body-font: 'Manrope', sans-serif;
+    --desktop-body-size: 18px;
+    --desktop-body-line-spacing: 32px;
+    --tablet-body-size: 16px;
+    --tablet-body-line-spacing: 28px;
+    --mobile-body-size: 16px;
+    --mobile-body-line-spacing: 28px;
+    
+    --dark-blue: hsl(273, 85%, 13%);
+    --green: hsl(150, 100%, 63%);
+    --grey: hsl(271, 12%, 34%);
+    --light-grey: hsl(276, 100%, 99%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--body-font);
+    font-size: var(--mobile-body-size);
+    line-height: var(--mobile-body-line-spacing);
+    width: 100vw;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+    font-weight: var(--heading-weight);
+}
+
+h1 {
+    font-size: var(--mobile-headingL-size);
+    line-height: var(--mobile-headingL-line-spacing);
+    color: var(--white);
+    text-align: center;
+    margin: 0 10%;
+}
+
+h2 {
+    font-size: var(--mobile-headingM-size);
+    line-height: var(--mobile-headingM-line-spacing);
+    color: var(--white);
+}
+
+h3 {
+    font-size: var(--mobile-headingS-size);
+    line-height: var(--mobile-headingS-line-spacing);
+    color: var(--dark-blue);
+}
+
+.background-container {
+    background-color: var(--dark-blue);
+    width: 300%;
+    height: 1200px;
+    border-radius: 100%;
+    position: absolute;
+    left: -100%;
+    top: -70%;
+    z-index:-100;
+}
+/* header */
+
+header {
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem 0rem 1rem;
+}
+
+.logo-light {
+    width: 96px;
+}
+
+.apply-link {
+    color: var(--white);
+    font-weight: bold;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: var(--green);
+    text-decoration-thickness: 2px;
+}
+
+.apply-link:hover {
+    color: var(--green);
+    transition: color 0.5s ease;
+}
+
+/* Main */
+
+main {
+    width: 100%;
+    margin-top: 4rem;
+}
+
+/* Hero */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.learn-more-link {
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    color: var(--dark-blue);
+    background-color: var(--green);
+    border: 1px solid var(--dark-blue);
+    margin-top: 2.5rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.learn-more-link:hover {
+    background-color: var(--dark-blue);
+    color: var(--green);
+    border: 1px solid var(--green);
+    transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
+    transition: border 0.5s ease;
+}
+
+.illustration {
+    width: 90%;
+    margin-top: 4rem;
+}
+
+/* Specs Styling */
+
+.specs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    text-align: center;
+    margin: 4rem 1rem 0;
+}
+
+/* Media Querries */
+
+/* Tablet */
+
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: var(--tablet-body-size);
+        line-height: var(--tablet-body-line-spacing);
+    }
+
+    h1 {
+        font-size: var(--tablet-headingL-size);
+        line-height: var(--tablet-headingL-line-spacing);
+    }
+
+    h2 {
+        font-size: var(--tablet-headingM-size);
+        line-height: var(--tablet-headingM-line-spacing);
+    }
+
+    h3 {
+        font-size: var(--tablet-headingS-size);
+        line-height: var(--tablet-headingS-line-spacing);
+    }
+
+    header {
+        padding: 2rem 2.5rem 0rem 2rem;
+    }
+
+    main {
+        margin-top: 3rem;
+    }
+
+    .illustration {
+        width: 60%;
+        margin-top: 3rem;
+    }
+
+    .specs-container {
+        gap: 3rem;
+        text-align: left;
+        margin: 2.75rem 5rem 0;
+    }
+}
+
+/* Desktop */
+
+@media only screen and (min-width: 1440px) {
+    html {
+        font-size: var(--desktop-body-size);
+        line-height: var(--desktop-body-line-spacing);
+    }
+
+    h1 {
+        font-size: var(--desktop-headingL-size);
+        line-height: var(--desktop-headingL-line-spacing);
+    }
+
+    h2 {
+        font-size: var(--desktop-headingM-size);
+        line-height: var(--desktop-headingM-line-spacing);
+    }
+
+    h3 {
+        font-size: var(--desktop-headingS-size);
+        line-height: var(--desktop-headingS-line-spacing);
+    }
+
+    header {
+        padding: 3.2rem 9.17rem 0rem 9.17rem;
+    }
+
+    main {
+        margin-top: 3.06rem;
+    }
+
+    .illustration {
+        width: 40%;
+        margin-top: 2.75rem;
+    }
+
+    .specs-container {
+        flex-direction: row;
+        gap: 3rem;
+        text-align: center;
+        margin: 4.5rem 9rem 0;
+    }
+}
